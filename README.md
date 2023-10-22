@@ -4,4 +4,4 @@ List Command for Linux
 - Mount a Storage
 - Basic Bash Command
 - Nginx Config
-  
+- Git Config
