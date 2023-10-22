@@ -1,2 +1,4 @@
 Install phpmyadmin on server
 Connect databasse and website
+Learn JS
+Build To Do List
