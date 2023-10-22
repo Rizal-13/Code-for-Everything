@@ -1,0 +1,16 @@
+- apt install samba
+- nano /etc/samba/smb.conf
+
+[insundrive]
+    path = <your dir>
+    writeable = yes
+    browseable = yes
+    public = yes
+    force user = <username>
+
+- sudo smbpasswd -a <username>
+- chown -R username <your dir> 
+- sudo ufw allow samba
+- sudo service smbd restart
+- \\ip-address
+- input username & password
