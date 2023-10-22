@@ -1,0 +1,65 @@
+# Math
+#!/bin/bash
+
+variable definition
+var_name="Insun"
+var_age="26"
+echo my name $var_name my age $var_age
+
+echo "Masukkan Panjang"
+read panjang
+echo "Masukkan Lebar"
+read lebar
+luas=$((panjang * lebar))
+echo "luas persegi diatas = $luas"
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# UPDATE System
+#!/bin/bash
+
+echo "Sistem Akan Diupdate"
+apt update
+echo "Sistem Telah Terupdate"
+
+echo "Sistem Akan Diupgrade"
+apt upgrade
+echo "Sistem Telah Terupgrade"
+
+clear
+echo "DONE!"
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Mount Storage
+
+#!/bin/bash
+
+echo "Loading ......."
+
+mount /dev/sda2 /media/insun
+
+echo " Storage Berhasil Di Mount "
+
+shutdown -h 00:00
+
+echo " Server Akan Mati Pada Jam 00.00 "
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Now
+#!/bin/bash
+
+date
+
+time=$(date +%H)
+if [ $time -lt 12 ];then
+    message="Selamat Pagi Rizal"
+elif [ $time -lt 15 ];then
+    message="Selamat Siang Rizal"
+elif [ $time -lt 18 ];then
+    message="Selamat Sore Rizal"
+else
+    message="Selamat Malam Rizal"
+fi
+echo "$message"
+
+cal
+
+echo "Cuaca Hari Ini"
+
+curl wttr.in/Surabaya?0
