@@ -4,3 +4,12 @@ If had a code
 - git commit -m "message"
 - git push
 
+-----------------------------------------------------
+
+git init
+git add <file(s)>
+git status
+git commit
+git config
+git branch
+git help
