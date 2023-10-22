@@ -13,5 +13,18 @@ neofetch <menampilkan informasi singkat tentang linux/>
 mv <untuk merubah nama/> mv now sekarang
 mv <untuk merubah lokasi/> mv now ./'namaFolder'
 cp <untuk copy file/> cp now
+timedatectl | timedatectl list-timezones | timedatectl set-timezone Asia/Jakarta <Merubah Waktu di linux/>
+rm -d	Menghapus direktori kosong menggunakan perintah rm.
+rm -r	Menghapus direktori yang tidak kosong dan isinya.
+rm -f	Mengabaikan prompt apa pun saat menghapus file yang dilindungi untuk penulisan (write-protected).
+rm -rf	Mengabaikan prompt apa pun saat menghapus folder tidak kosong yang dilindungi untuk penulisan.
+rm -i	Menghasilkan prompt sebelum menghapus setiap file.
+rm -I	Menghasilkan prompt hanya sekali sebelum menghapus lebih dari tiga file.
+rm *	Wildcard yang mewakili banyak karakter.
+rm ?	Wildcard yang mewakili satu karakter.
+rmdir -p	Menghapus subdirektori kosong dan direktori induknya.
+rmdir -v	Menampilkan informasi bahwa direktori tertentu telah dihapus.
+
+
 
 
