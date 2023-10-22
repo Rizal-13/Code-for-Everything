@@ -1,0 +1,7 @@
+apt update && apt upgrade -y
+apt install neofetch
+apt install nano
+apt install nginx
+nano /etc/nginx/sites-available/default ( change port )
+Testing nginx
+cd /var/www/html (change index.html etc)
