@@ -2,3 +2,4 @@ Install phpmyadmin on server
 Connect databasse and website
 Learn JS
 Build To Do List
+Build Second Server for Experimental Project
