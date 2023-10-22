@@ -1,0 +1,17 @@
+chmod +x <perintah yang akan dieksekusi/>
+htop <task manager on linux/>
+lsblk <menampilkan storage/>
+cd <common directory/>
+service --status-all <menampilkan semua status app yang berjalan/>
+df -h <menampilkan informasi  sorage volume/disk yang digunakan system dan telah dimount ke linux/>
+lscpu <mengecek spek/>
+cat {file name} <menampilkan isi text dari file tersebut/>
+ln -s <membuat Symlink konfigurasi webserver/> {ln -s /etc/nginx/sites-available/vps188.dewiweb.net /etc/nginx/sites-enabled/}
+unlink <untuk melepas konfigurasi webserver/> {unlink /etc/nginx/sites-enabled/default}
+service nginx status / systemctl status nginx {start|stop|restart|reload|force-reload|status|configtest|rotate|upgrade} <mengecek, dll/>
+neofetch <menampilkan informasi singkat tentang linux/>
+mv <untuk merubah nama/> mv now sekarang
+mv <untuk merubah lokasi/> mv now ./'namaFolder'
+cp <untuk copy file/> cp now
+
+
