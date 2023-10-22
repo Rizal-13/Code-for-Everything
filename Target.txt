@@ -1,0 +1,4 @@
+Setting Ubuntu Server
+Deploy Private Blog
+Install phpmyadmin on server
+Connect databasse and website
