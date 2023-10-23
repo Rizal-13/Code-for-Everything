@@ -1,4 +1,4 @@
-# Command-Linux
+# Code
 List Command for Linux
 - Samba Config
 - Mount a Storage
