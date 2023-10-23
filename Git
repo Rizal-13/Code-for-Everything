@@ -1,10 +1,12 @@
 If had a code
+
 - git pull
 - git add <file> or .
 - git commit -m "message"
 - git push
 
 -----------------------------------------------------
+Command Git
 
 git init
 git add <file(s)>
@@ -13,3 +15,17 @@ git commit
 git config
 git branch
 git help
+git config --list
+git config --global user.email "email"
+git config --global user.name "username"
+
+-----------------------------------------------------
+If Clone Repository from Github
+
+git clone <url>
+git pull
+if change something
+git add <file> or .
+git commit -m "message"
+git push
+
