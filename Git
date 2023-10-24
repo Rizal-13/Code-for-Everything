@@ -23,6 +23,9 @@ alias <command>="git log --all --decorate --oneline --graph" => example command
 git branch <name> => for add a branch
 git checkout <branch name> => for cd branch
 git log => for logging 
+git merge <branch name> => for merge other branch, but must log on your main branch 
+git branch -d <branch name> for delete branch after you merge
+git branch -D <branch name> if you want force delete a branch
 
 -----------------------------------------------------
 If Clone Repository from Github
