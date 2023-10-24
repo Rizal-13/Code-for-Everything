@@ -18,6 +18,11 @@ git help
 git config --list
 git config --global user.email "email"
 git config --global user.name "username"
+git log --all --decorate --oneline --graph
+alias <command>="git log --all --decorate --oneline --graph" => example command
+git branch <name> => for add a branch
+git checkout <branch name> => for cd branch
+git log => for logging 
 
 -----------------------------------------------------
 If Clone Repository from Github
