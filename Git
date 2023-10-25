@@ -11,7 +11,7 @@ Command Git
 git init
 git add <file(s)>
 git status
-git commit
+git commit => for change a file after edit
 git config
 git branch
 git help
