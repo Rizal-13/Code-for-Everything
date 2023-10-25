@@ -38,3 +38,8 @@ git add <file> or . => for add something you change from your repository
 git commit -m "message" or git commit -am "message" => for make a message after you add something to your repo
 git push =. to push any change from your repository
 
+-----------------------------------------------------
+Note
+if your file Modified (M) you can directly commit
+if your file Untracked (U) you must add the file before commit
+
