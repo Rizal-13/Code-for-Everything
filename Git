@@ -42,4 +42,8 @@ git push =. to push any change from your repository
 Note
 if your file Modified (M) you can directly commit
 if your file Untracked (U) you must add the file before commit
+if you want back to our branch that you delete you can use this step :
+- git log => search hash string and copy seven char 
+- git checkout <seven char hash>
+- git log --all --decorate --oneline --graph => for check head bar
 
