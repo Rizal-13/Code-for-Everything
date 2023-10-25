@@ -30,10 +30,11 @@ git branch -D <branch name> if you want force delete a branch
 -----------------------------------------------------
 If Clone Repository from Github
 
-git clone <url>
-git pull
-if change something
-git add <file> or .
-git commit -m "message"
-git push
+git clone <url> => if you want clone repository from github
+git pull => if you want update your repository from github
+
+If Change Something
+git add <file> or . => for add something you change from your repository
+git commit -m "message" or git commit -am "message" => for make a message after you add something to your repo
+git push =. to push any change from your repository
 
