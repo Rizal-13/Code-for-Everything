@@ -15,6 +15,10 @@ git commit => for change a file after edit
 git config
 git branch
 git help
+git remote
+git fetch
+git pull
+git push
 git config --list
 git config --global user.email "email"
 git config --global user.name "username"
