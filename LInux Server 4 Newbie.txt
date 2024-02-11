@@ -1,0 +1,78 @@
+Alur instalasi server
+
+1.  Update software (sudo apt update)
+2.  Upgrade software (sudo apt upgrade)
+3.  Tambah user baru (adduser <username>)
+4.  Ubah otoritas user baru (usermod -aG sudo insun)
+5.  Cek apakah ototritas sudah sama dengan root (groups)
+6.  Install neofetch (sudo apt install neofetch)
+7.  Install nano (sudo apt install nano)
+8.  Install nginx (sudo apt install nginx)
+9.  Jika ingin mengganti port untuk webserver (sudo nano /etc/nginx/sites-available/default)
+10. Testing nginx (your ip)
+11. Install firewall (sudo apt install ufw)
+12. Ubah konfigurasi firewall (sudo sudo nano /etc/default/ufw)
+13. Install Samba (sudo apt install samba)
+14. Ubah konfigurasi samba (sudo nano /etc/samba/smb.conf)
+15. Isi dengan konfigurasi berikut
+    [folder name]
+    path = <your dir>
+    writeable = yes
+    browseable = yes
+    public = yes
+    readonly = no
+    force user = <username>
+
+16. Menambahkan username untuk login samba (sudo smbpasswd -a <username>)
+17. Merubah hak akses ke folder tertentu menggunakan samba (chown -R username <your dir>)
+18. Memberikan hak akses ke samba untuk diakses secara local (sudo ufw allow samba)
+19. Restart samba (sudo service smbd restart)
+20. Untuk windows klik kanan pada desktop lalu cari new kemudian shortcut dan isi dengan //<ip addr>
+21. Kemudian input username & password
+22. Install php fpm untuk nginx webserver (sudo apt install php-fpm)
+23. Lakukan konfigurasi webserver (sudo nano /etc/nginx/sites-available/default)
+24. Ubah baris codingnya menjadi berikut
+
+        root /var/www/html;
+
+        # Add index.php to the list if you are using PHP
+        index index.html index.htm index.php;
+
+        server_name _;
+
+        location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                try_files $uri $uri/ =404;
+        }
+
+        # pass PHP scripts to FastCGI server
+        #
+        location ~ \.php$ {
+                include snippets/fastcgi-php.conf;
+        #
+        #       # With php-fpm (or other unix sockets):
+                fastcgi_pass unix:/run/php/php8.1-fpm.sock;
+        #       # With php-cgi (or other tcp sockets):
+        #       fastcgi_pass 127.0.0.1:9000;
+        }
+
+        # deny access to .htaccess files, if Apache's document root
+        # concurs with nginx's one
+        #
+        #location ~ /\.ht {
+        #       deny all;
+        #}
+
+25. Untuk baris fastcgi_pass unix/var/run/php/php- - fpm.sock; ubah baris sesuai versi php
+26. Cek codingan di nginx (nginx -t)
+27. Jika sukses buat file php baru untuk mengecek versi php lewat browser (<?php phpinfo(); ?>)
+28. Ubah konfigurasi waktu (sudo timedatectl set-timezone Asia/Jakarta)
+29. Install mariadb server (sudo apt install mariadb-server)
+30. Masuk ke mysql database (sudo mysql -uroot)
+31. Buat user baru (CREATE USER ‘username’@’localhost’ IDENTIFIED BY ‘password’;)
+32. Berikan semua hak akses ke user tersebut (GRANT ALL PREVILEGES ON _._ TO ‘username’@’localhost’;)
+33. GRANT ALL PRIVILEGES ON _._ TO 'insun'@'localhost' REQUIRE NONE WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
+34. Install phpMyAdmin (sudo apt-get install phpMyAdmin)
+35. Ketika ada pilihan webserver pilih saja apache karena akan dikonfigurasi ulang nantinya oleh phpMyAdmin
+36. Kemudian buat link agar terhubung dengan phpMyAdmin (sudo ln -s /usr/share/phpMyAdmin /var/www/html)
